@@ -15,7 +15,6 @@ export class App extends Component {
 
   componentDidMount() {
     const prevContacts = localStorage.getItem('contacts');
-    // console.log('prevContacts = ', prevContacts);
     if (prevContacts) {
       try {
         const contacts = JSON.parse(prevContacts);
@@ -23,14 +22,11 @@ export class App extends Component {
       } catch (error) {
         console.error('Error = ', error);
       }
-      // console.log('contacts = ', contacts);
     }
   }
 
   componentDidUpdate(prevProps, prevState) {
     if (prevState.contacts !== this.state.contacts) {
-      // console.log('prevState = ', prevState.contacts);
-      // console.log('this.state.contacts = ', this.state.contacts);
       localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
     }
   }
@@ -56,14 +52,12 @@ export class App extends Component {
   //     number: '',
   //   }));
   // };
-
   // ==================
   addNewUser = newUser => {
     this.setState(prev => ({
       contacts: [...prev.contacts, newUser],
     }));
   };
-  // ================
 
   handlerOnChange = e => {
     this.setState({ [e.target.name]: e.target.value });

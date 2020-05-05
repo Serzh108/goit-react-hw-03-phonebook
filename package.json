@@ -1,5 +1,5 @@
 {
-  "name": "homework-2",
+  "name": "homework-3",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -20,7 +20,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://serzh108.github.io/goit-react-hw-02-phonebook/",
+  "homepage": "https://serzh108.github.io/goit-react-hw-03-phonebook/",
   "eslintConfig": {
     "extends": "react-app"
   },
